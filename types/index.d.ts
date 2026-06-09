@@ -1,21 +1,21 @@
-export type ExAttributes = {
+export type Attributes = {
     bang: boolean;
     nargs: "0" | "1" | "*" | "+" | "?";
 };
-export type ExOptions = {
+export type Options = {
     force: boolean;
     alias?: string;
 };
-export type ExDefinition = {
+export type Definition = {
     name: string;
     callback: (ctx: any) => Promise<void>;
-    attributes: ExAttributes;
-    options: ExOptions;
+    attributes: Attributes;
+    options: Options;
 };
 export type SetupOptions = {
     force: boolean;
 };
-declare function setup(setupOptions?: SetupOptions): void;
+declare function setup(opts?: SetupOptions): void;
 declare const _default: {
     setup: typeof setup;
 };

@@ -1,23 +1,25 @@
 import type { Definition } from ".";
 import type { RsvimCmd } from "rsvim-types";
 
-async function write(ctx: RsvimCmd.CommandContext): Promise<void> {
+export async function writeQuit(ctx: RsvimCmd.CommandContext): Promise<void> {
   const bufId = ctx.currentBufferId;
   try {
     const written = Rsvim.buf.writeSync(bufId);
     Rsvim.cmd.echo(
       `Saved buffer ${bufId}, ${written} bytes have been written.`,
     );
+    Rsvim.rt.exit();
+    Rsvim.cmd.echo("Bye");
   } catch (exception) {
     Rsvim.cmd.echo(`Failed to save buffer ${bufId}: ${exception}.`);
   }
 }
 
 const _default: Definition = {
-  name: "write",
-  callback: write,
+  name: "writeQuit",
+  callback: writeQuit,
   attributes: { bang: false, nargs: "0" },
-  options: { alias: "w", force: true },
+  options: { alias: "wq", force: true },
 };
 
 export default _default;

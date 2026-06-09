@@ -1,21 +1,22 @@
 import quit from "./quit.js";
 import write from "./write.js";
+import writeQuit from "./writeQuit.js";
 
-export type ExAttributes = {
+export type Attributes = {
   bang: boolean;
   nargs: "0" | "1" | "*" | "+" | "?";
 };
 
-export type ExOptions = {
+export type Options = {
   force: boolean;
   alias?: string;
 };
 
-export type ExDefinition = {
+export type Definition = {
   name: string;
   callback: (ctx: any) => Promise<void>;
-  attributes: ExAttributes;
-  options: ExOptions;
+  attributes: Attributes;
+  options: Options;
 };
 
 export type SetupOptions = {
@@ -26,15 +27,13 @@ const DefaultSetupOptions: SetupOptions = {
   force: true,
 };
 
-function setup(setupOptions?: SetupOptions): void {
-  setupOptions = setupOptions ?? DefaultSetupOptions;
+function setup(opts?: SetupOptions): void {
+  opts = opts ?? DefaultSetupOptions;
 
-  [quit, write].forEach((cmd) => {
-    let options = cmd.options;
-    if (typeof setupOptions.force === "boolean") {
-      options.force = setupOptions.force;
-    }
-    Rsvim.cmd.create(cmd.name, cmd.callback, cmd.attributes, options);
+  [quit, write, writeQuit].forEach((cmd) => {
+    var o: Options = { ...cmd.options };
+    Object.assign(o, opts);
+    Rsvim.cmd.create(cmd.name, cmd.callback, cmd.attributes, o);
   });
 }
 
