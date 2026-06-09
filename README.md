@@ -34,8 +34,8 @@ git clone --branch=main https://github.com/rsvim/ex.rsvim ex.rsvim
 ### npm
 
 ```bash
-# version v0.2.1
-npm install ex.rsvim@v0.2.1
+# version 0.2.1
+npm install ex.rsvim@0.2.1
 
 # latest version
 npm install @rsvim/ex.rsvim
