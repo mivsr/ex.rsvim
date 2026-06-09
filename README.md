@@ -1,6 +1,6 @@
 # ex.rsvim
 
-<a href="https://www.npmjs.com/package/@rsvim/ex.rsvim"><img alt="rsvim" src="https://img.shields.io/npm/v/%40rsvim%2Fex.rsvim" /></a>
+<a href="https://www.npmjs.com/package/ex.rsvim"><img alt="rsvim" src="https://img.shields.io/npm/v/ex.rsvim" /></a>
 <a href="https://github.com/rsvim/ex.rsvim/actions/workflows/ci.yml"><img alt="ci.yml" src="https://img.shields.io/github/actions/workflow/status/rsvim/ex.rsvim/ci.yml?branch=main&label=ci" /></a>
 
 ## About
@@ -17,36 +17,27 @@ cd $XDG_CONFIG_HOME/rsvim
 cd $HOME/.rsvim
 ```
 
-<details>
-<summary><small><i style="color: grey;">Which version should I use?</i></small></summary>
-<small><i style="color: grey;">
+Then install with either `git` or `npm`:
 
-<ul>
-<li> For release version of Rsvim, use a "x.y.?" branch or tag. </li>
-<li> For development branch of Rsvim, use "main" branch. </li>
-</ul>
-
-</i></small>
-
-</details>
+> Plugin version should be compatible with the Rsvim version, for example install `ex.rsvim 0.1.x` for `Rsvim 0.1.x`, `ex.rsvim 0.2.x` for `Rsvim 0.2.x` (or development branch if Rsvim didn't release v0.2 yet)
 
 ### git
 
 ```bash
-# version branch
-git clone --branch=v0.1.x https://github.com/rsvim/ex.rsvim @rsvim/ex.rsvim
+# tag v0.2.1
+git clone --branch=v0.2.1 https://github.com/rsvim/ex.rsvim ex.rsvim
 
-# or main branch
-git clone https://github.com/rsvim/ex.rsvim @rsvim/ex.rsvim
+# main branch
+git clone --branch=main https://github.com/rsvim/ex.rsvim ex.rsvim
 ```
 
 ### npm
 
 ```bash
-# tagged version
-npm install @rsvim/ex.rsvim@v0.1.0
+# version v0.2.1
+npm install ex.rsvim@v0.2.1
 
-# or latest version
+# latest version
 npm install @rsvim/ex.rsvim
 ```
 
@@ -55,18 +46,24 @@ npm install @rsvim/ex.rsvim
 Setup in your config entry script:
 
 ```javascript
-import ex from "@rsvim/ex.rsvim";
+import ex from "ex.rsvim";
 ex.setup();
 ```
 
 The `setup` function accepts an optional object, by default is:
 
-https://github.com/rsvim/ex.rsvim/blob/1f09822850f2d70af712c7d62eb5b08c84c647e2/src/index.ts?plain=1#L32-L36
+<!-- https://github.com/rsvim/ex.rsvim/blob/47447301c8ca909171f8e41f03761392763eac99/src/index.ts?plain=1#L25-L27 -->
+
+```typescript
+const DefaultSetupOptions: SetupOptions = {
+  force: true,
+};
+```
 
 You can pass your custom options when setup:
 
 ```javascript
-import ex from "@rsvim/ex.rsvim";
+import ex from "ex.rsvim";
 ex.setup({
   // Your configurations here...
 });
@@ -90,17 +87,6 @@ There are a lot of ex commands, which cannot be done all at once. This section t
 
 Contributions are always welcomed :)
 
-### Project Structure
-
-```
-|-lib    // Compiled javascript files
-|-src    // Typescript source files
-|-types  // Typescript type declarations
-```
-
-> [!WARNING]
-> Please **DO NOT** manually edit files under `lib` and `types`.
-
 ### Development Environment
 
 Please setup the development environment with:
@@ -113,6 +99,16 @@ Here are some useful tools:
 
 - `npm run prettier`: Format source code.
 - `npm run tsc`: Compile typescript to javascript and `.d.ts` declarations.
+
+The project structure is:
+
+```
+|-lib    // Compiled javascript files
+|-src    // Typescript source files
+|-types  // Typescript type declarations
+```
+
+Please **DO NOT** manually edit files under `lib` and `types`.
 
 ## Supporting the Project
 
