@@ -1,7 +1,7 @@
 # ex.rsvim
 
-<a href="https://www.npmjs.com/package/ex.rsvim"><img alt="rsvim" src="https://img.shields.io/npm/v/ex.rsvim" /></a>
-<a href="https://github.com/rsvim/ex.rsvim/actions/workflows/ci.yml"><img alt="ci.yml" src="https://img.shields.io/github/actions/workflow/status/rsvim/ex.rsvim/ci.yml?branch=main&label=ci" /></a>
+<a href="https://www.npmjs.com/package/ex.rsvim"><img alt="npmjs" src="https://img.shields.io/npm/v/ex.rsvim" /></a>
+<a href="https://github.com/mivsr/ex.rsvim/actions/workflows/ci.yml"><img alt="ci.yml" src="https://img.shields.io/github/actions/workflow/status/mivsr/ex.rsvim/ci.yml?branch=main&label=ci" /></a>
 
 ## About
 
@@ -19,22 +19,22 @@ cd $HOME/.rsvim
 
 Then install with either `git` or `npm`:
 
-> Plugin version should be compatible with the Rsvim version, for example install `ex.rsvim 0.1.x` for `Rsvim 0.1.x`, `ex.rsvim 0.2.x` for `Rsvim 0.2.x` (or development branch if Rsvim didn't release v0.2 yet)
+> Plugin version should be compatible with the Rsvim version, for example install `ex.rsvim 0.1` for `Rsvim 0.1`
 
 ### git
 
 ```bash
-# tag v0.2.1
+# tag
 git clone --branch=v0.2.1 https://github.com/rsvim/ex.rsvim ex.rsvim
 
-# main branch
+# develop branch
 git clone --branch=main https://github.com/rsvim/ex.rsvim ex.rsvim
 ```
 
 ### npm
 
 ```bash
-# version 0.2.1
+# specific version
 npm install ex.rsvim@0.2.1
 
 # latest version
