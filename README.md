@@ -27,7 +27,7 @@ Then install with either `git` or `npm`:
 # tag
 git clone --branch=v0.2.1 https://github.com/rsvim/ex.rsvim ex.rsvim
 
-# develop branch
+# develop
 git clone --branch=main https://github.com/rsvim/ex.rsvim ex.rsvim
 ```
 
@@ -38,7 +38,7 @@ git clone --branch=main https://github.com/rsvim/ex.rsvim ex.rsvim
 npm install ex.rsvim@0.2.1
 
 # latest version
-npm install @rsvim/ex.rsvim
+npm install ex.rsvim
 ```
 
 ## Setup
@@ -52,7 +52,7 @@ ex.setup();
 
 The `setup` function accepts an optional object, by default is:
 
-<!-- https://github.com/rsvim/ex.rsvim/blob/47447301c8ca909171f8e41f03761392763eac99/src/index.ts?plain=1#L25-L27 -->
+<!-- https://github.com/mivsr/ex.rsvim/blob/47447301c8ca909171f8e41f03761392763eac99/src/index.ts?plain=1#L25-L27 -->
 
 ```typescript
 const DefaultSetupOptions: SetupOptions = {
@@ -120,4 +120,4 @@ If you like RSVIM, please consider sponsoring it. Your support encourages contri
 
 ## License
 
-Licensed under [Vim License](https://github.com/rsvim/ex.rsvim/blob/main/LICENSE.txt).
+Licensed under "Vim License".
