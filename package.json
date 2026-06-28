@@ -5,13 +5,13 @@
   "keywords": [
     "rsvim"
   ],
-  "homepage": "https://github.com/rsvim/ex.rsvim",
+  "homepage": "https://github.com/mivsr/ex.rsvim",
   "bugs": {
-    "url": "https://github.com/rsvim/ex.rsvim/issues"
+    "url": "https://github.com/mivsr/ex.rsvim/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rsvim/ex.rsvim.git"
+    "url": "git+https://github.com/mivsr/ex.rsvim.git"
   },
   "license": "Vim",
   "author": "rsvim",
