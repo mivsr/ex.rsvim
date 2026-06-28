@@ -96,10 +96,11 @@ Please setup the development environment with:
 2. Run `mise i` to install python, node and other npm cli tools.
 3. Run `npm i` to install dependencies.
 
-Here are some useful tools:
+Here are some useful commands:
 
 - `npm run prettier`: Format source code.
 - `npm run tsc`: Compile typescript to javascript and `.d.ts` declarations.
+- `npm version major|minor|patch --no-git-tag-version`: Bump version (without creating a git tag).
 
 The project structure is:
 
