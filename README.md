@@ -19,7 +19,7 @@ cd $HOME/.rsvim
 
 Then install with either `git` or `npm`:
 
-> Plugin version should be compatible with the Rsvim version, for example install `ex.rsvim 0.1` for `Rsvim 0.1`
+> Plugin version should be compatible with the Rsvim version, e.g. `ex.rsvim 0.1` for `Rsvim 0.1`.
 
 ### git
 
