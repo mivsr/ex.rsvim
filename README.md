@@ -19,16 +19,17 @@ cd $HOME/.rsvim
 
 Then install with either `git` or `npm`:
 
-> Plugin version should be compatible with the Rsvim version, e.g. `ex.rsvim 0.1` for `Rsvim 0.1`.
+> Plugin version is compatible with the Rsvim version, e.g. `ex.rsvim 0.1` for `Rsvim 0.1`.
 
 ### git
 
 ```bash
 # tag
-git clone --branch=v0.2.1 https://github.com/rsvim/ex.rsvim ex.rsvim
+
+git clone --branch=v0.2.1 https://github.com/rsvim/ex.rsvim
 
 # develop
-git clone --branch=main https://github.com/rsvim/ex.rsvim ex.rsvim
+git clone --branch=main https://github.com/rsvim/ex.rsvim
 ```
 
 ### npm
