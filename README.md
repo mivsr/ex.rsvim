@@ -25,7 +25,6 @@ Then install with either `git` or `npm`:
 
 ```bash
 # tag
-
 git clone --branch=v0.2.1 https://github.com/rsvim/ex.rsvim
 
 # develop
